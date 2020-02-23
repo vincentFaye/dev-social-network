@@ -4,8 +4,10 @@
   "description": "A Mern stack app",
   "main": "server.js",
   "scripts": {
-    "server": "node serve",
-    "serve": "nodemon serve"
+    "server": "node server",
+    "serve": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Vincent Diegane Faye",
   "license": "MIT",
