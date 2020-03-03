@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { setAlert } from './alert'
-import { REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT } from './types'
+import { REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, CLEAR_PROFILE } from './types'
 import setAuthToken from '../utils/setAuthToken'
 
 // Load User
@@ -11,6 +11,7 @@ export const loadUser = () => async dispatch => {
 
   try {
     const res = await axios.get('/api/auth')
+    console.log(res.data)
     dispatch({
       type: USER_LOADED,
       payload: res.data
@@ -87,7 +88,6 @@ export const login = (email, password) => async dispatch => {
 
 // Logout et clear Profile
 export const logout = () => dispatch => {
-  dispatch({
-    type: LOGOUT
-  })
+  dispatch({ type: CLEAR_PROFILE })
+  dispatch({ type: LOGOUT })
 }
