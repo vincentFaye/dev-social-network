@@ -139,6 +139,7 @@ export const addExperience = (formData, history) => async dispatch => {
 
 // Add education
 export const addEducation = (formData, history) => async dispatch => {
+  debugger
   try {
     const config = {
       headers: {

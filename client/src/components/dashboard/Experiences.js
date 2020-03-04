@@ -5,6 +5,7 @@ import { deleteExperience } from '../../actions/profile'
 import Moment from 'react-moment'
 
 const Experiences = ({ experience, deleteExperience }) => {
+  console.log(experience)
   const experiences = experience.map(exp => (
     <tr key={exp._id}>
       <td>{exp.company}</td>
