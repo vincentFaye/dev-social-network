@@ -10,6 +10,7 @@ A simple social app for developers.
 ### run backend server
 ```npm run server```
 ### run client server
+```npm run client```or
 ```cd client```
 ```npm start```
 ### But in fact there's no need cause we have the ```concurrently``` package installed. So you have just to run the command:
